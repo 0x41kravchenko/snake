@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<title>Snake</title>
+		<style>
+		
+			body {
+				background-color: #eaeaea;
+				text-align: center;
+			}
+			
+			#score-wrapper {
+				text-align: right;
+			}
+			
+			#score {
+				font-weight: bold;
+			}
+			
+			#canvas-container {
+				margin-top: 100px;
+				text-align: center;
+				display: inline-block;
+			}
+			
+			.game-over{
+				background-color: #ee2222;
+			}
+			
+			#canvas {
+				/* do not set width and height of canvas in CSS it can appear distorted */
+				background-color: #ffffff;
+				border: 1px solid lightgrey;
+			}
+		
+			.controlls {
+				margin-top: 10px;
+			}
+			
+			.controlls .controll {
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+				background-color: #ffffff;
+				border: 1px solid grey;
+				margin: 5px;
+			}
+			
+			.arrows {
+				border: 10px solid #ffffff;
+				width: 0;
+			}
+			
+			.arrow_up {
+				border-bottom: 15px solid black;
+				margin: 8px auto;
+			}
+		
+			.arrow_down {
+				border-top: 15px solid black;
+				margin: 20px auto;
+			}
+		
+			.arrow_left {
+				border-right: 15px solid black;
+				margin: 15px auto auto 6px;
+			}
+		
+			.arrow_right {
+				border-left: 15px solid black;
+				margin: 15px 6px auto auto;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id="canvas-container">
+			<div id="score-wrapper">Score: <span id="score">0</span></div>
+			<canvas id="canvas" width="300px" height="300px">
+				Unfortunately your browser does not support &lt;canvas&gt; element required by this game
+			</canvas>
+			<!--
+			<div class="controlls">
+				<div class="row">
+					<div class="controll" id="up"><div class="arrows arrow_up"></div></div>
+				</div>
+				<div class="row">	
+					<div class="controll" id="left"><div class="arrows arrow_left"></div></div>
+					<div class="controll" id="down"><div class="arrows arrow_down"></div></div>
+					<div class="controll" id="right"><div class="arrows arrow_right"></div></div>
+				</div>
+			</div>-->
+			<p class="text">
+				Use WASD or arrow keys to control.<br>
+				Space or P to pause.<br>
+				Any key to restart after game is over.
+			</p>
+		</div>
+		<script src="snake.js"></script>
+	</body>
+</html>
